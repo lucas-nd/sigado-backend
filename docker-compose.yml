@@ -1,7 +1,7 @@
 version: '3.8'
 services:
-  nest-api:
-    container_name: nest-api
+  sigado-api:
+    container_name: sigado-api
     build:
       context: .
       dockerfile: Dockerfile
@@ -17,7 +17,7 @@ services:
     container_name: postgres
     restart: always
     ports:
-      - 5432:5432
+      - 5433:5432
     env_file:
       - .env
     volumes:
@@ -25,4 +25,4 @@ services:
 
 volumes:
   postgres:
-    name: nest-db
+    name: sigado-db
